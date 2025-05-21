@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Starquill's Library</h1>
+        <div class="content">
+        <div class="left">
+            <div>
+                <button class="add">Add</button>
+                <div class="box">
+                    <input id="title" type="text" placeholder="Enter the book name">
+                    <input id="author" type="text" placeholder="Author">
+                    <input id="pages" type="number" placeholder="No of pages">
+                    <label>
+                      Read
+                      <input id="read" type="checkbox" />
+                    </label>
+                    <input id="submit" type="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Books</h2>
+            <div class="makeCard"></div>
+        </div>
+    </div>
+</body>
+</html>

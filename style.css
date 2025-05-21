@@ -1,0 +1,92 @@
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    background-color: seashell;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+}
+button{
+    font: bold;
+    margin: 30px;
+    padding: 15px;
+    border-radius: 2vmin;
+    margin-left: 3vw;
+    color: black;
+    border-color: white;
+    background-color: skyblue;
+    height: fit-content;
+    width: fit-content;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.left{
+    display: flex;
+    align-items:stretch;
+    justify-content: center;
+    flex: 1;
+    margin: 1px;
+    background-color: lavender;
+    height: 100%;
+    
+}
+.right{
+    flex: 6;
+    margin: 1px;
+    background-color: #f5a623;
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    position: fixed;
+    height: 30vh;
+    width: 14vw;
+    background-color: skyblue;
+    transform: translate(-22%,-35%);
+    display: none;
+}
+input{
+    margin-bottom: 10px;
+}
+label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.makeCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.card{
+    border-radius: 10px;
+    height: 250px;
+    width: 200px;
+    background-color: lavender;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+    white-space: normal;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
