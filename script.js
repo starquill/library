@@ -29,13 +29,15 @@ function makeCard(newBook){
     const checked=document.createElement("input");
     const remove=document.createElement("button");
     checked.type="checkbox";
-    checked.disabled=true;
     title.textContent=`Title: ${newBook.title}`;    
     author.textContent=`Author: ${newBook.author}`;  
     pages.textContent=`Pages: ${newBook.pages}`;  
     checked.checked=newBook.read;  
     remove.textContent="Delete Book";
-    remove.addEventListener('click',()=>{
+    checked.addEventListener("change",()=>{
+       newBook.read=checked.checked; 
+    });
+    remove.addEventListener("click",()=>{
         card.remove();
     });
     card.append(title,author,pages,checked,remove);
