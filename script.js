@@ -27,16 +27,22 @@ function makeCard(newBook){
     const author=document.createElement("div");
     const pages=document.createElement("div");
     const checked=document.createElement("input");
+    const remove=document.createElement("button");
     checked.type="checkbox";
     checked.disabled=true;
     title.textContent=`Title: ${newBook.title}`;    
     author.textContent=`Author: ${newBook.author}`;  
     pages.textContent=`Pages: ${newBook.pages}`;  
     checked.checked=newBook.read;  
-    card.append(title,author,pages,checked);
+    remove.textContent="Delete Book";
+    remove.addEventListener('click',()=>{
+        card.remove();
+    });
+    card.append(title,author,pages,checked,remove);
+    card.id=`${newBook.id}`;
+    
     card.classList.add("card");
     makecard.appendChild(card);
-
 }
 
 addButton.addEventListener("click",()=>{
@@ -44,12 +50,17 @@ addButton.addEventListener("click",()=>{
 })
 
 submitButton.addEventListener("click",()=>{
+    if(titleInput.value=="" || authorInput.value=="" || pagesInput.value==""){
+        alert("Sir enter the details");
+    }
+    else{
     popup.style.display="none";
     addBookToLibrary(titleInput.value,authorInput.value,pagesInput.value,readInput.checked);
     titleInput.value = "";
     authorInput.value = "";
     pagesInput.value = "";
     readInput.checked = false;
+    }
 })
 
 

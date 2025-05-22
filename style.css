@@ -27,6 +27,9 @@ button{
     height: fit-content;
     width: fit-content;
 }
+.makeCard button{
+    margin: 0px;
+}
 .content{
     display: flex;
     flex-direction: row;
